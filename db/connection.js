@@ -3,11 +3,9 @@ import chalk from 'chalk';
 
 mongoose.set('returnOriginal', false);
 
-mongoose
-  .connect('mongodb://127.0.0.1:27017/express-harry-potter-api')
-  .catch((err) => {
-    console.log(`error connection go to mongodb: ${err.message}`);
-  });
+mongoose.connect('mongodb://127.0.0.1:27017/league-api').catch((err) => {
+  console.log(`error connection go to mongodb: ${err.message}`);
+});
 
 mongoose.connection.on('disconnected', () => {
   console.log(chalk.bold('disconnected from mongodb'));

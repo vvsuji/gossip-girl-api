@@ -1,9 +1,11 @@
 import mongoose from 'mongoose';
 import chalk from 'chalk';
 
+const url = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/league-api';
+
 mongoose.set('returnOriginal', false);
 
-mongoose.connect('mongodb://127.0.0.1:27017/league-api').catch((err) => {
+mongoose.connect(url).catch((err) => {
 	console.log(`error connection go to mongodb: ${err.message}`);
 });
 

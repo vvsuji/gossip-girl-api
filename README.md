@@ -8,7 +8,8 @@ go to https://league-api-production.up.railway.app/characters to view a json fil
 
 ## Model for Characters
 
-```const Character = new Schema({
+```
+  const Character = new Schema({
   name: { type: String },
   title: { type: String },
   blurb: { type: String },
